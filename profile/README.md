@@ -42,5 +42,6 @@ An endless **mining + building + tower defense** game set in a universe that has
 <p align="center">
   <strong>The Ark is waiting. · 方舟在等你。</strong><br /><br />
   <a href="https://playgeomeria.com/play/">Launch the Ark →</a><br /><br />
-  Made by <a href="https://yangpan.com/en">Pan YANG</a>
+  Made by <a href="https://yangpan.com/en">Pan YANG</a><br />
+  Contact · 联系我们：<a href="mailto:hi@playgeomeria.com">hi@playgeomeria.com</a>
 </p>
