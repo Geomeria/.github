@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-0.5 -0.5 1 1" width="512" height="512" color-interpolation-filters="sRGB">
+  <title>Geomeria</title>
+  <desc>Three reflection axes; concentric equilateral triangles, a 24-segment ring, and white lights.</desc>
+  <!-- Authoritative brand source. Raster metadata specifies pixel rounding and small-icon variants. -->
+  <metadata>
+    <exports xmlns="https://playgeomeria.com/ns/brand" supersampling="4" pillow="11.3.0">
+      <profile id="full" />
+      <profile id="small" radius="0.42" stroke="0.06" inner-stroke-factor="0.5" dot-radius-factor="0.6" hide="ring vertices" />
+      <output name="icon-192.png" size="192" scale="1" profile="full" />
+      <output name="icon-512.png" size="512" scale="1" profile="full" />
+      <output name="icon-maskable-512.png" size="512" scale="0.78" profile="full" />
+      <output name="apple-touch-icon.png" size="180" scale="0.92" profile="full" />
+      <output name="favicon-32.png" size="32" scale="1" profile="small" />
+      <output name="favicon-64.png" size="64" scale="1" profile="small" />
+      <output name="favicon.ico" size="64" scale="1" profile="small" sizes="16 32 48 64" />
+    </exports>
+  </metadata>
+  <view id="mark" viewBox="-0.5 -0.5 1 1" />
+  <style>#mark:target ~ #background { display: none; }</style>
+  <defs>
+    <filter id="halo-blur" filterUnits="userSpaceOnUse" x="-2" y="-2" width="4" height="4">
+      <feColorMatrix in="SourceGraphic" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 0 1" result="rgb" />
+      <feGaussianBlur in="rgb" stdDeviation="0.12" edgeMode="duplicate" result="color-blur" />
+      <feGaussianBlur in="SourceAlpha" stdDeviation="0.12" edgeMode="duplicate" result="alpha-blur" />
+      <feComposite in="color-blur" in2="alpha-blur" operator="in" />
+    </filter>
+    <filter id="glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feColorMatrix in="SourceGraphic" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 0 1" result="rgb" />
+      <feGaussianBlur in="rgb" stdDeviation="0.03" result="color-blur" />
+      <feGaussianBlur in="SourceAlpha" stdDeviation="0.03" result="alpha-blur" />
+      <feComposite in="color-blur" in2="alpha-blur" operator="in" />
+    </filter>
+    <filter id="glow-fine" x="-100%" y="-100%" width="300%" height="300%">
+      <feColorMatrix in="SourceGraphic" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 0 1" result="rgb" />
+      <feGaussianBlur in="rgb" stdDeviation="0.008" result="color-blur" />
+      <feGaussianBlur in="SourceAlpha" stdDeviation="0.008" result="alpha-blur" />
+      <feComposite in="color-blur" in2="alpha-blur" operator="in" />
+    </filter>
+    <g id="halo" fill="#22f0ff" opacity="0.14901960784313725">
+      <circle cx="0" cy="0" r="0.54" />
+      <rect x="-2" y="-0.20396078054371145" width="4" height="0.4079215610874229" />
+      <rect x="-0.20396078054371145" y="-2" width="0.4079215610874229" height="4" />
+    </g>
+    <g id="geometry" transform="scale(0.36)" fill="none" stroke-linejoin="round">
+      <!-- The doubled stroke is clipped to its inner half, matching Pillow's inward arc stroke. -->
+      <defs><clipPath id="ring-clip"><circle r="1.22" /></clipPath></defs>
+      <path id="ring" d="M 1.2168395794315694,-0.08775783685119767 A 1.22,1.22 0 0 1 1.2168395794315694,0.08775783685119767 M 1.1980901757577709,0.23017369691759737 A 1.22,1.22 0 0 1 1.1526633766895913,0.399708819065266 M 1.09769290654371,0.5324192736214773 A 1.22,1.22 0 0 1 1.0099350696925127,0.6844203058100918 M 0.9224896797719937,0.7983813566925045 A 1.22,1.22 0 0 1 0.7983813566925048,0.9224896797719937 M 0.684420305810092,1.0099350696925127 A 1.22,1.22 0 0 1 0.5324192736214772,1.0976929065437102 M 0.39970881906526623,1.152663376689591 A 1.22,1.22 0 0 1 0.2301736969175974,1.1980901757577709 M 0.08775783685119795,1.2168395794315694 A 1.22,1.22 0 0 1 -0.0877578368511978,1.2168395794315694 M -0.23017369691759726,1.1980901757577709 A 1.22,1.22 0 0 1 -0.3997088190652661,1.1526633766895913 M -0.5324192736214771,1.0976929065437102 A 1.22,1.22 0 0 1 -0.6844203058100923,1.0099350696925122 M -0.7983813566925045,0.9224896797719938 A 1.22,1.22 0 0 1 -0.9224896797719937,0.7983813566925048 M -1.0099350696925122,0.6844203058100924 A 1.22,1.22 0 0 1 -1.0976929065437102,0.5324192736214773 M -1.1526633766895913,0.39970881906526584 A 1.22,1.22 0 0 1 -1.1980901757577707,0.23017369691759773 M -1.2168395794315694,0.08775783685119776 A 1.22,1.22 0 0 1 -1.2168395794315694,-0.08775783685119747 M -1.1980901757577709,-0.23017369691759745 A 1.22,1.22 0 0 1 -1.1526633766895913,-0.3997088190652655 M -1.0976929065437102,-0.532419273621477 A 1.22,1.22 0 0 1 -1.0099350696925125,-0.6844203058100921 M -0.9224896797719938,-0.7983813566925045 A 1.22,1.22 0 0 1 -0.7983813566925049,-0.9224896797719936 M -0.684420305810092,-1.0099350696925127 A 1.22,1.22 0 0 1 -0.5324192736214783,-1.0976929065437098 M -0.3997088190652664,-1.152663376689591 A 1.22,1.22 0 0 1 -0.23017369691759784,-1.1980901757577707 M -0.0877578368511973,-1.2168395794315694 A 1.22,1.22 0 0 1 0.08775783685119685,-1.2168395794315694 M 0.2301736969175974,-1.1980901757577709 A 1.22,1.22 0 0 1 0.399708819065266,-1.1526633766895913 M 0.5324192736214779,-1.0976929065437098 A 1.22,1.22 0 0 1 0.6844203058100916,-1.0099350696925127 M 0.7983813566925049,-0.9224896797719936 A 1.22,1.22 0 0 1 0.9224896797719931,-0.7983813566925053 M 1.0099350696925125,-0.6844203058100921 A 1.22,1.22 0 0 1 1.09769290654371,-0.5324192736214775 M 1.152663376689591,-0.39970881906526645 A 1.22,1.22 0 0 1 1.1980901757577704,-0.23017369691759895" stroke="#b14aff" stroke-opacity="0.7843137254901961" stroke-width="0.06111111111111111" clip-path="url(#ring-clip)" data-stroke-rounding="floor" data-inset-stroke="true" />
+      <polygon id="outer" points="6.123233995736766e-17,-1.0 0.8660254037844387,0.49999999999999983 -0.8660254037844385,0.5000000000000003" stroke="#22f0ff" stroke-width="0.06111111111111111" data-stroke-min="2" />
+      <polygon id="inner" points="6.123233995736766e-17,1.0 -0.8660254037844388,-0.4999999999999998 0.8660254037844384,-0.5000000000000004" transform="scale(0.385)" stroke="#ff3af2" stroke-width="0.12698412698412698" />
+      <g id="vertices" fill="#ffffff">
+      <circle cx="6.123233995736766e-17" cy="-1.0" r="0.07944444444444444" />
+      <circle cx="0.8660254037844387" cy="0.49999999999999983" r="0.07944444444444444" />
+      <circle cx="-0.8660254037844385" cy="0.5000000000000003" r="0.07944444444444444" />
+      </g>
+      <circle id="dot" cx="0" cy="0" r="0.07638888888888888" fill="#ffffff" />
+    </g>
+  </defs>
+  <g id="background">
+    <rect x="-0.5" y="-0.5" width="1" height="1" fill="#000000" />
+    <use href="#halo" filter="url(#halo-blur)" />
+  </g>
+  <g id="logo">
+    <use href="#geometry" filter="url(#glow)" />
+    <use href="#geometry" filter="url(#glow)" />
+    <use href="#geometry" filter="url(#glow-fine)" />
+    <use href="#geometry" />
+  </g>
+</svg>
